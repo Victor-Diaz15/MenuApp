@@ -1,0 +1,26 @@
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" sizeXs="12" sizeMd="6" sizeLg="6">
+        <ion-item>
+          <ion-label position="stacked">Introduce el primer numero</ion-label>
+          <ion-input [(ngModel)]="num1" type="number" placeholder="0"></ion-input>
+        </ion-item>
+      </ion-col>
+
+      <ion-col size="6" sizeXs="12" sizeMd="6" sizeLg="6">
+        <ion-item>
+          <ion-label position="stacked">Introduce el segundo numero</ion-label>
+          <ion-input [(ngModel)]="num2" type="number" placeholder="0"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-button (click)="sumar()" expand="block">Sumar</ion-button>
+
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="6">
+        <h4 class="text-center">Resultado</h4>
+        <p class="text-center">{{resultado | number}}</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>

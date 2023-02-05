@@ -8,6 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class FolderPage implements OnInit {
   public folder!: string;
+  public title: string = "Menu App";
 
   constructor(private activatedRoute: ActivatedRoute) { }
 

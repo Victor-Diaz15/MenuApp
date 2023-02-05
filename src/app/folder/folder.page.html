@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>{{ folder }}</ion-title>
+    <ion-title>{{ title }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -11,11 +11,26 @@
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">{{ folder }}</ion-title>
+      <!-- <ion-title size="large">Menu App</ion-title> -->
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong class="capitalize">{{ folder }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <strong class="capitalize">{{ folder }}</strong>
+        <app-inicio *ngIf="folder === 'Inicio'"></app-inicio>
+        <app-sumadora *ngIf="folder === 'Sumadora'"></app-sumadora>
+        <app-traductor *ngIf="folder === 'Traductor de Numeros'"></app-traductor>
+        <app-tabla-multiplicacion *ngIf="folder === 'Tabla de Multiplicacion'"></app-tabla-multiplicacion>
+        <app-experiencia *ngIf="folder === 'Mi Experiencia'"></app-experiencia>
+      </ion-col>
+      <!-- <ion-col>
+
+      </ion-col> -->
+    </ion-row>
+  </ion-grid>
+
+  <!-- <div id="container">
+  </div> -->
 </ion-content>
