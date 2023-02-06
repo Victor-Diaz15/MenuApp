@@ -28,7 +28,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     FormsModule,
-    IonicModule
+    IonicModule,
+
   ]
 })
 export class MenuAppModule { }
